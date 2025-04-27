@@ -280,7 +280,7 @@ return (
             </select>
           </div>
           <div className="form-section">
-        <h2>Target Audience</h2>
+        <h2 className="input-label">Target Audience</h2>
         <select 
           className="input-field"
           value={audience}

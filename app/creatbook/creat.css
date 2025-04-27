@@ -85,7 +85,8 @@
   margin-bottom: 1.5rem;
 }
 
-.input-label {
+.input-label,
+h2{
   display: block;
   margin-bottom: 0.8rem;
   color: #374151;
@@ -104,6 +105,7 @@
   transition: all 0.2s ease;
   padding-left:3px ;
 }
+
 
 .input-field:focus {
   outline: none;
