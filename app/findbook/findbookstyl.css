@@ -1,4 +1,11 @@
 /* Global Styles */
+
+html, body {
+  margin: 0;
+  padding-top: 15px;
+  width: 100%;
+  overflow-x: hidden;
+}
 :root {
     --primary-color: #4a4e69;
     --secondary-color: #2b2d42;
@@ -229,22 +236,115 @@
   }
   
   /* Mobile Responsiveness */
-  @media (max-width: 768px) {
-    .input-group {
-      flex-direction: column;
-    }
-  
-    .inputbutton {
-      width: 100%;
-      justify-content: center;
-    }
-  
-    .h2search {
-      font-size: 2rem;
-    }
-  
-    .book-item {
-      flex-direction: column;
-      align-items: start;
-    }
+  /* Mobile Responsiveness Fixes */
+@media (max-width: 768px) {
+  .chat-container {
+    padding-top: 60px;
   }
+
+  .h2search {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .search-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .input-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .inputbook {
+    padding: 0.8rem 2rem 0.8rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 30px;
+  }
+
+  .clear-button {
+    right: 2.8rem;
+    font-size: 1.2rem;
+  }
+
+  .input-icon {
+    right: 0.8rem;
+    font-size: 1rem;
+  }
+
+  .inputbutton {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    justify-content: center;
+  }
+
+  .quick-suggestions {
+    gap: 0.3rem;
+    justify-content: flex-start;
+  }
+
+  .quick-suggestions button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .response-container {
+    padding: 1.2rem;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+  }
+
+  .book-item {
+    padding: 1rem;
+    margin: 0.8rem 0;
+    gap: 0.8rem;
+  }
+
+  .book-marker {
+    font-size: 1.2rem;
+  }
+
+  .empty-state {
+    padding: 2rem 0;
+  }
+
+  .empty-state img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .h2search {
+    font-size: 1.5rem;
+  }
+
+  .search-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .inputbook {
+    font-size: 0.9rem;
+    padding-left: 1rem;
+    padding-right: 1.8rem;
+  }
+
+  .response-container {
+    padding: 1rem;
+  }
+
+  .book-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .book-item:hover {
+    transform: none;
+  }
+
+  .app-footer {
+    padding: 1.5rem;
+    font-size: 0.8rem;
+  }
+}

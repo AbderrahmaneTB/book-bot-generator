@@ -17,7 +17,6 @@ export default function Navbar (){
     <Link href={"./creatbook"}>
     <button className="navbutton">create your book</button>
     </Link>
-    <button className="navbuttonsing">enjoy</button>
     </div>
   </nav>
     )
