@@ -138,8 +138,8 @@ html, body {
     animation: bounce 1.4s infinite ease-in-out;
   }
   .try{
-    margin-top: 8px;
-    margin-left: 50px;
+    margin-top: 7px;
+    margin-right: 10px;
   }
   
   @keyframes bounce {
@@ -290,6 +290,7 @@ html, body {
   .quick-suggestions {
     gap: 0.3rem;
     justify-content: flex-start;
+    
   }
 
   .quick-suggestions button {

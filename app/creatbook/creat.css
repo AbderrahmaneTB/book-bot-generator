@@ -177,7 +177,7 @@ textarea.input-field {
   border: none;
   border-radius: 25px;
   font-family: 'Press Start 2P', cursive;
-  font-size: 0.75rem;
+  font-size:0.75rem;
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
@@ -210,39 +210,6 @@ textarea.input-field {
   right: 12px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .continuation-prompt {
-    padding: 1.2rem;
-    margin: 1rem;
-    max-width: 90%;
-  }
-  
-  .continuation-prompt h4 {
-    font-size: 0.8rem;
-  }
-  
-  .continue-btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 0.7rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .continuation-prompt {
-    padding: 1rem;
-  }
-  
-  .continuation-prompt textarea {
-    font-size: 0.85rem;
-    padding: 0.8rem;
-    min-height: 80px;
-  }
-  
-  .continue-btn::after {
-    font-size: 0.9rem;
-  }
-}
 
 
 .locations-input {
@@ -316,6 +283,9 @@ textarea.input-field {
   margin: 1.5rem 0;
   overflow: hidden;
   position: relative;
+}
+.sectformion h2{
+  font-size: 10px;
 }
 
 .progress-fill {
@@ -391,39 +361,146 @@ textarea.input-field {
 .markdown-preview h2 {
   color: var(--primary);
   margin: 2rem 0 1rem;
+
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
+/* ── TABLET & SMALL DESKTOP (≤1024px) ────────────────────────────── */
+@media (max-width: 1024px) {
+  /* Collapse 2-col grids */
+  .grid-2col {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Full-width inputs */
+  .input-field,
+  textarea.input-field,
+  select.input-field {
+    width: 100% !important;
+  }
+
+  /* Narrow the form cards so they don’t overflow */
   .form-card {
-    padding: 1.5rem;
+    margin: 1.5rem auto;
+    padding: 1.25rem;
   }
-  
-  .input-field {
-    padding: 0.875rem;
-  }
-  
-  .generate-button {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .preview-section {
-    padding: 1.5rem;
-    margin: 2rem auto;
-  }
-}
 
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2rem;
+  /* Smaller section titles */
+  .form-card .section-title,
+  .sectformion h2,
+  .continuation-prompt h4 {
+    font-size: 1.25rem;
   }
-  
-  .hero-subtitle {
+
+  /* Tighter spacing in continuation prompt */
+  .continuation-prompt {
+    max-width: 90%;
+    padding: 1.25rem;
+  }
+
+  /* Button tweaks */
+  .generate-button,
+  .continue-btn {
+    width: auto;
+    padding: 0.75rem 1.25rem;
     font-size: 1rem;
   }
-  
+}
+
+/* ── SMALL TABLET (≤768px) ───────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Hero: shrink headline */
+  .hero h1 {
+    font-size: 2.25rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  /* Stack navbar & form sections */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem 1rem;
+  }
+  .navbar-brand,
+  .nav-links,
+  .signup-btn {
+    width: 100%;
+    text-align: center;
+    margin: 0.25rem 0;
+  }
+
+  /* Form cards full-width */
+  .container > .form-card,
+  .container > .plot-card {
+    max-width: 100%;
+  }
+
+  /* Reduce grid gap */
+  .grid-2col {
+    gap: 1rem;
+  }
+
+  /* Shrink input padding */
+  .input-field,
+  textarea.input-field {
+    padding: 0.75rem;
+  }
+
+  /* Continuation prompt & buttons */
+  .continuation-prompt,
+  .continue-btn {
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  /* Preview section */
+  .preview-section {
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+  }
+}
+
+/* ── MOBILE (≤480px) ──────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  /* Even smaller headings */
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  .section-title span.icon {
+    font-size: 1.25rem;
+  }
+
+  /* Tighten up all gaps and font-sizes */
+  .grid-2col { gap: 0.75rem; }
+  .feature-card,
+  .form-card {
+    padding: 1rem;
+  }
+  .feature-card h3,
+  .form-card h2,
+  .sectformion h2 {
+    font-size: 1.1rem;
+  }
   .input-label {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+  }
+  .input-field,
+  textarea.input-field,
+  select.input-field {
+    padding: 0.65rem;
+  }
+
+  /* Buttons full-width */
+  .generate-button,
+  .continue-btn {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  /* Continuation-prompt text area */
+  .continuation-prompt textarea {
+    min-height: 80px;
   }
 }

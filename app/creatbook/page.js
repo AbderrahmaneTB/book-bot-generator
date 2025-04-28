@@ -353,8 +353,8 @@ return (
       </div>
 
       {/* Antagonist Input */}
-      <div className="form-section">
-        <h2>Antagonist/Villain (Optional)</h2>
+      <div className="sectformion">
+        <h2 className="section-title">Antagonist/Villain (Optional)</h2>
         <input
           placeholder="Example: 'The Consortium - shadow organization manipulating global tech markets'"
           className="input-field"
@@ -369,7 +369,7 @@ return (
 
       <div className="form-card plot-card">
       <div className="form-section">
-  <h2>Core Theme</h2>
+  <h2 className="section-title">Core Theme</h2>
   <textarea
     placeholder="Main Theme (1-2 sentences) 
     Example: 'The struggle between technology and humanity in a cyberpunk world'"
