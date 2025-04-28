@@ -108,7 +108,6 @@ return (
                 onKeyPress={(e) => e.key === 'Enter' && sendMess()}
                 aria-label="Book search input"
               />
-              <span className="input-icon">📚</span>
               {input && (
                 <button 
                   className="clear-button"
