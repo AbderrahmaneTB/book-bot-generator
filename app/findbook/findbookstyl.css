@@ -2,7 +2,7 @@
 
 html, body {
   margin: 0;
-  padding-top: 15px;
+  padding-top: 30px;
   width: 100%;
   overflow-x: hidden;
 }
@@ -69,11 +69,12 @@ html, body {
   
   .inputbook {
     width: 100%;
-    padding: 1rem 2.5rem 1rem 1.5rem;
+    padding: 1rem 2.5rem 1.5rem 1.5rem;
     border: 2px solid #dee2e6;
     border-radius: 50px;
     font-size: 1.1rem;
     transition: all 0.3s ease;
+
   }
   
   .inputbook:focus {
@@ -104,7 +105,7 @@ html, body {
   
   /* Button Styles */
   .inputbutton {
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
     background: var(--primary-color);
     color: white;
     border: none;
@@ -114,6 +115,8 @@ html, body {
     gap: 0.5rem;
     transition: all 0.3s ease;
     cursor: pointer;
+
+
   }
   
   .inputbutton:hover:not(:disabled) {
@@ -136,6 +139,7 @@ html, body {
   }
   .try{
     margin-top: 8px;
+    margin-left: 50px;
   }
   
   @keyframes bounce {
@@ -261,6 +265,8 @@ html, body {
     padding: 0.8rem 2rem 0.8rem 1.2rem;
     font-size: 1rem;
     border-radius: 30px;
+    width: 100%;
+    margin-right: 29px;
   }
 
   .clear-button {
@@ -269,15 +275,16 @@ html, body {
   }
 
   .input-icon {
-    right: 0.8rem;
+    right: 1.3rem;
     font-size: 1rem;
   }
 
   .inputbutton {
-    width: 100%;
+    width: 90%;
     padding: 0.8rem;
     font-size: 0.9rem;
     justify-content: center;
+    margin-left:8px;
   }
 
   .quick-suggestions {
