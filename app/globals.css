@@ -44,10 +44,12 @@ body {
   flex-wrap: nowrap;         /* never wrap */
   overflow-x: auto;          /* allow horizontal scroll */
   margin-top: 0;   
-  margin-top: 10px;  
+  margin-top: 10px; 
+  -webkit-overflow-scrolling: touch; 
           /* no extra offset */
 }
-.navbar::-webkit-scrollbar { height: 4px; }
+.navbar::-webkit-scrollbar {  
+  display: none; }
 .navbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 2px; }
 
 /* Brand / main logo in navbar */
@@ -82,6 +84,7 @@ body {
   font-size: clamp(1rem,1.5vw,1.2rem);
   cursor: pointer;
   transition: all .3s ease;
+  padding: 0.5rem 1rem ;
 
 }
 .signup-btn {
@@ -219,65 +222,73 @@ body {
 
 /* ── RESPONSIVE OVERRIDES ─────────────────────────────────────────── */
 /* Tablet (≤1024px) */
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .logo2 {
-    max-width: 180px;
-    width: 50%;
-    margin: 1.5rem auto;
+    position: relative;
+    transform: none;
+    margin: 1rem auto;
+    width: 40%;
+    max-width: 200px;
+    height: auto;
   }
   .signup-btn {
-    font-size: 1.1rem;
-    padding: .7rem 1.2rem;
-    max-width: 80%;
+    width: auto;
+    max-width: 90%;
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
     margin: 1rem auto;
   }
-  .nav-links { gap: 1.5rem; }
+  .nav-links {
+    gap: 1.5rem !important;
+  }
 }
 
-/* Small Tablet (≤768px) */
-@media (max-width:768px) {
-  body { padding-top: calc(1rem + 100px); }
+/* ── SMALL TABLET (≤768px) ───────────────────────────────────────── */
+@media (max-width: 768px) {
+  body {
+    padding-top: calc(1rem + 100px); /* allow extra room for stacked navbar */
+  }
   .navbar {
     flex-direction: column;
     align-items: center;
-    padding: .75rem 1rem;
+    padding: 0.75rem 1rem;
   }
   .nav-links {
     width: 100%;
     justify-content: center;
-    gap: 1rem;
-    margin-bottom: .5rem;
+    gap: 1rem !important;
+    margin-bottom: 0.5rem;
   }
   .logo2 {
-margin-top: 50px;
-    width: 300px;
-    height: 300px;
+    max-width: 160px;
+    width: 50%;
   }
   .signup-btn {
-    font-size: 1.3rem;
-    padding: .6rem 1rem;
-    margin-left: 50px;
-    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.65rem 0.9rem;
   }
 }
 
-/* Mobile (≤480px) */
-@media (max-width:480px) {
+/* ── MOBILE (≤480px) ──────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 0.75rem ;
+  }
+  .navbutton,
+  .navbuttonsing,
+  .mainsing {
+    font-size: 0.8rem ;
+    padding: 0.4rem 0.8rem ;
+  }
   .logo2 {
     max-width: 120px;
-    width: 70%;
-    margin: 1rem auto;
+    width: 60%;
+    margin: 0.75rem auto;
   }
   .signup-btn {
-    font-size: .9rem;
-    padding: .5rem .8rem;
-  }
-  .nav-links { gap: .75rem; }
-  .hero h2 { font-size: 2rem; }
-  .hero p  { font-size: 1rem; }
-  .continuation-prompt { padding: 1rem; }
-  .continue-btn {
-    font-size: .7rem;
-    padding: .8rem 1.2rem;
+    font-size: 0.85rem;
+    padding: 0.5rem 0.75rem;
+    max-width: 95%;
+    margin-left: 30px;
   }
 }
