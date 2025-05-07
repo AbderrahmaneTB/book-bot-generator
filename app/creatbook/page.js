@@ -34,7 +34,7 @@ export default function Creatbook ()
       const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
-          "Authorization": "Bearer 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",
+          "Authorization": "Bearer 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",
           "Content-Type": "application/json",
           "X-Title": "AI Book Generator"
         },
@@ -87,7 +87,7 @@ export default function Creatbook ()
         const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
           method: "POST",
           headers: {
-            "Authorization": "Bearer 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",
+            "Authorization": "Bearer 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",
             "Content-Type": "application/json",
             "X-Title": "AI Book Generator"
             
